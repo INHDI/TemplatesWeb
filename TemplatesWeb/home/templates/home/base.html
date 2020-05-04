@@ -49,15 +49,15 @@
                 <li class="has-children active">
                   <a>Danh mục</a> 
                   <ul class="dropdown">
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Children</a></li>
+                    {%for item in danhmuc%}
+                    <li><a href="/home/sanpham/{{item.id}}">{{item.Loai_sp}}</a></li>
+                    {% endfor%}
                     <li class="has-children">
-                      <a href="#">Mục khác</a>
+                      <a>Mục khác</a>
                       <ul class="dropdown">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Children</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">...</a></li>
                       </ul>
                     </li>
                   </ul>

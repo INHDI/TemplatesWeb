@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "home/base.html" %}
+{% block title %}INHDI &mdash; Shopping{% endblock %}
+
+{% block content %}
+
+<div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12 mb-0"><br /> <br /><a href="{% url 'index'%}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Giỏ Hàng</strong></div>
+        </div>
+      </div>
+    </div>
+
+<div class="container mt-5">
+    <div class="border p-4 mb-4 mr-5">
+
+
+        <form action="" method="post">
+
+
+            <p> <span style="color:red">Họ Và Tên: &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; </span>{{f.Ho_ten}}</p>
+            <p> <span style="color:red">Số Điện Thoại: &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</span>{{f.SDT}}</p>
+            <p> <span style="color:red">Email: &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  </span>{{f.Email}}</p>
+            <p> <span style="color:red">Địa Chỉ Nhận Hàng: &nbsp; &nbsp; &nbsp; &nbsp; </span>{{f.Dia_chi}}</p>
+            <p> <span style="color:red">Ghi Chú: &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>{{f.Ghi_chu}}</p>
+            <p> <span style="color:red">Số lượng:&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>{{f.So_luong}}</p>
+            <p> <span style="color:red">Sản Phẩm:  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>{{f.San_Pham}}</p>
+            {% csrf_token %}
+            <input type="submit" value="Mua Hàng">
+
+        </form>
+    </div>
+</div>
+{% endblock %}

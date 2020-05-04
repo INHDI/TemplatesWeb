@@ -3,6 +3,7 @@
     {% block title %}INHDI &mdash; Shopping{% endblock %}
 
     {% block content %}
+    {% load static %}
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
@@ -11,19 +12,20 @@
       </div>
     </div>  
 
+    {% for item in a %}
     <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="border">
-              <img src="images/product_1.jpg" alt="Image" class="img-fluid">
+              <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
             </div>
           </div>
           <div class="col-md-6">
-            <h2 class="text-black">The Shoe</h2>
+            <h2 class="text-black">{{item.San_Pham.Ten_sp}}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas, distinctio, aperiam, ratione dolore.</p>
             <p class="mb-4">Ex numquam veritatis debitis minima quo error quam eos dolorum quidem perferendis. Quos repellat dignissimos minus, eveniet nam voluptatibus molestias omnis reiciendis perspiciatis illum hic magni iste, velit aperiam quis.</p>
-            <p><strong class="text-primary h4">$50.00</strong></p>
+            <p><strong class="text-primary h4">${{item.Gia_sale}}</strong></p>
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
               <div class="input-group-prepend">
@@ -36,12 +38,14 @@
             </div>
 
             </div>
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+            <p><a href="#" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
 
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+
 
     <div class="site-section">
       <div class="container">

@@ -14,7 +14,6 @@
     </div>
 
 
-
     <div class="site-section">
       <div class="container">
 
@@ -32,70 +31,22 @@
               <div class="products-wrap border-top-0">
   <div class="container-fluid">
     <div class="row no-gutters products">
-      <div class="col-6 col-md-6 col-lg-6 border-top">
-        <a href="{% url 'shop_single'%}" class="item">
-          <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The Shoe</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6 border-top">
-        <a href="shop-single.html" class="item">
+      
+        {% for item in f%}
+
+        <div class="col-6 col-md-6 col-lg-6 border-top">
+        <a href="/home/sanpham/chitiet/{{item.id}}" class="item">
           <span class="tag">Sale</span>
           <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
           <div class="item-info">
-            <h3>Marc Jacobs Bag</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50 <del>$30.00</del></strong>
+            <h3>{{item.San_Pham.Ten_sp}}</h3>
+            <span class="collection d-block">{{item.San_Pham.Mo_ta}}</span>
+            <strong class="price">${{item.Gia_sale}} <del>${{item.Gia_ban}}</del></strong>
           </div>
         </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="shop-single.html" class="item">
-          <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The  Belt</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
+        </div>
 
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="shop-single.html" class="item">
-          <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The Shoe</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="shop-single.html" class="item">
-          <span class="tag">Sale</span>
-          <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>Marc Jacobs Bag</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50 <del>$30.00</del></strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="shop-single.html" class="item">
-          <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The  Belt</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
-
+        {% endfor %}
     </div>
   </div>
 </div>
@@ -110,11 +61,11 @@
 
           <div class="col-lg-3 order-1 order-lg-2 mb-5 mb-lg-0">
             <div class="border p-4 mb-4">
-              <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
+              <h3 class="mb-3 h6 text-uppercase text-black d-block">Danh mục</h3>
               <ul class="list-unstyled mb-0">
-                <li class="mb-1"><a href="#" class="d-flex"><span>Men</span> <span class="text-black ml-auto">(2,220)</span></a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>Women</span> <span class="text-black ml-auto">(2,550)</span></a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>Children</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                  {%for item in danhmuc%}
+                <li class="mb-1"><a href="/home/sanpham/{{item.id}}" class="d-flex"><span>{{item.Loai_sp}}</span> </a></li>
+                  {% endfor%}
               </ul>
             </div>
 

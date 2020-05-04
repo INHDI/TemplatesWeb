@@ -13,7 +13,8 @@
     <ProjectGuid>245b001e-f4fe-4c66-9893-2cd5b370f3e2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>manage.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -84,6 +85,7 @@
     <Folder Include="home\templates\" />
     <Folder Include="home\templates\home\" />
     <Folder Include="TemplatesWeb\" />
+    <Folder Include="TemplatesWeb\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="home\static\home\css\aos.css" />
@@ -255,7 +257,6 @@
     <Content Include="home\templates\home\shop.html" />
     <Content Include="home\templates\home\thankyou.html" />
     <Content Include="requirements.txt" />
-    <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />
@@ -284,6 +285,10 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="TemplatesWeb\__pycache__\settings.cpython-38.pyc" />
+    <Content Include="TemplatesWeb\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="TemplatesWeb\__pycache__\wsgi.cpython-38.pyc" />
+    <Content Include="TemplatesWeb\__pycache__\__init__.cpython-38.pyc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'app',
     'home',
+    'cart',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
