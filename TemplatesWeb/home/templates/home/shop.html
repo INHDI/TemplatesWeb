@@ -1,0 +1,218 @@
+﻿{% extends "home/base.html" %}
+
+{% block title %}INHDI &mdash; Shopping{% endblock %}
+
+    {% block content %}   
+    {% load static %} 
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+            
+          <div class="col-md-12 mb-0"><br /><a href="{% url 'index'%}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-lg-9 order-2 order-lg-1">
+
+            <div class="row align">
+              <div class="col-md-12 mb-5">
+                <div class="float-md-left"><h2 class="text-black h5">Shop All</h2></div>
+                <div class="d-flex">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="products-wrap border-top-0">
+  <div class="container-fluid">
+    <div class="row no-gutters products">
+      <div class="col-6 col-md-6 col-lg-6 border-top">
+        <a href="{% url 'shop_single'%}" class="item">
+          <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>The Shoe</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50</strong>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-6 col-lg-6 border-top">
+        <a href="shop-single.html" class="item">
+          <span class="tag">Sale</span>
+          <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>Marc Jacobs Bag</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50 <del>$30.00</del></strong>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-6 col-lg-6">
+        <a href="shop-single.html" class="item">
+          <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>The  Belt</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50</strong>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-6 col-lg-6">
+        <a href="shop-single.html" class="item">
+          <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>The Shoe</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50</strong>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-6 col-lg-6">
+        <a href="shop-single.html" class="item">
+          <span class="tag">Sale</span>
+          <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>Marc Jacobs Bag</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50 <del>$30.00</del></strong>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-6 col-lg-6">
+        <a href="shop-single.html" class="item">
+          <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
+          <div class="item-info">
+            <h3>The  Belt</h3>
+            <span class="collection d-block">Summer Collection</span>
+            <strong class="price">$9.50</strong>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <div class="site-block-27">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 order-1 order-lg-2 mb-5 mb-lg-0">
+            <div class="border p-4 mb-4">
+              <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a href="#" class="d-flex"><span>Men</span> <span class="text-black ml-auto">(2,220)</span></a></li>
+                <li class="mb-1"><a href="#" class="d-flex"><span>Women</span> <span class="text-black ml-auto">(2,550)</span></a></li>
+                <li class="mb-1"><a href="#" class="d-flex"><span>Children</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+              </ul>
+            </div>
+
+            <div class="border p-4 mb-4">
+              <div class="mb-4">
+                <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
+                <div id="slider-range" class="border-primary"></div>
+                <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase">The Collections</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 block-3 products-wrap">
+            <div class="nonloop-block-3 owl-carousel">
+              
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>The Shoe</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50</strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <span class="tag">Sale</span>
+                  <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>Marc Jacobs Bag</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50 <del>$30.00</del></strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>The  Belt</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50</strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <img src="{% static 'home/images/product_1.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>The Shoe</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50</strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <span class="tag">Sale</span>
+                  <img src="{% static 'home/images/product_2.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>Marc Jacobs Bag</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50 <del>$30.00</del></strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="product">
+                <a href="shop-single.html" class="item">
+                  <img src="{% static 'home/images/product_3.jpg' %}" alt="Image" class="img-fluid">
+                  <div class="item-info">
+                    <h3>The  Belt</h3>
+                    <span class="collection d-block">Summer Collection</span>
+                    <strong class="price">$9.50</strong>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
